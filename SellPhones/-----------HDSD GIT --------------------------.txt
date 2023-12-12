@@ -1,0 +1,13 @@
+- Cập nhật code về : (ghi đủ 3 bước)
+	1.git add .
+	2.git commit -m "Chỉnh sửa gì thì ghi zô và thêm ngày cuối dòng"
+	3.git pull
+
+
+-Lấy code từ git ( lấy cho lần đầu tiên)
+	1.git clone https://github.com/katkt123/Sellphone.git
+
+-Up code lên git
+	1.git add .
+	2.git commit -m "Chỉnh sửa gì thì ghi zô và thêm ngày cuối dòng"
+	3.git push

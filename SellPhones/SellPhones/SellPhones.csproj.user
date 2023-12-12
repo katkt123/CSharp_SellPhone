@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="GUI\CTPhieuNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\EditTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\ForgotPassGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\LoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MainGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MuaBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\RegisterGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\ResetPasswordGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\SubGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\TaoSanPhamMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\ThemNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\ThemPhieuNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\ThemSPNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\CTHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\CTHDInfoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\HoaDonInfoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\HoaDonUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\KhachHangUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\KhuyenMaiUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\Mau1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\NhaCungCapUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\NhanVienUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\PhieuNhapKhoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\SanPhamBiXoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\SanPhamUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\TaiKhoanUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\TaoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\TaoHoaDon2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\TaoKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\TaoSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\ThongKe1UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\TrangChuUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\UserControls\XemHoaDonKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

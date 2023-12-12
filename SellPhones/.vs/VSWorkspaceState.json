@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SellPhones",
+    "\\SellPhones\\BUS",
+    "\\SellPhones\\Comp",
+    "\\SellPhones\\DAO",
+    "\\SellPhones\\GUI",
+    "\\SellPhones\\GUI\\UserControls",
+    "\\SQL"
+  ],
+  "SelectedNode": "\\SellPhones\\GUI\\UserControls\\KhuyenMaiUC.cs",
+  "PreviewInSolutionExplorer": false
+}

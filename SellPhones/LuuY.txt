@@ -1,0 +1,5 @@
+------FIle UserControls tạo usercontrol size 980x500------ (Rất Quan Trọng ---- Tạo UserControl chứ không phải tạo Winform----)
+
+------Thêm thư viện nào lạ lạ thì zô References thêm------
+
+------Có Lớp DataProvider để kết nối csdl rồi nên hãy theo mà làm ------- 
