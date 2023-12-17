@@ -72,9 +72,11 @@
             // label_mucgiamgia
             // 
             label_mucgiamgia.AutoSize = true;
+            label_mucgiamgia.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label_mucgiamgia.ForeColor = Color.OrangeRed;
             label_mucgiamgia.Location = new Point(123, 134);
             label_mucgiamgia.Name = "label_mucgiamgia";
-            label_mucgiamgia.Size = new Size(43, 20);
+            label_mucgiamgia.Size = new Size(46, 20);
             label_mucgiamgia.TabIndex = 11;
             label_mucgiamgia.Text = "-20%";
             // 

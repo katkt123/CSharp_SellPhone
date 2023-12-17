@@ -118,6 +118,14 @@ namespace SellPhones.DAO
             return result > 0;
         }
 
+        public int GetSoLuongTrongCuaHang(string maSP)
+        {
+            string query = "SELECT SoLuong FROM SanPham WHERE MaSP = @MaSP";
+            object result = DataProvider.Instance.ExecuteScalar(query, new object[] { maSP });
+
+            // If the result is not null, parse it to an integer; otherwise, return 0
+            return result != null ? Convert.ToInt32(result) : 0;
+        }
 
     }
 }

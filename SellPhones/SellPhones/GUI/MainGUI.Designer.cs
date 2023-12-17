@@ -184,6 +184,8 @@
             // 
             button_MuaBan.BackColor = Color.PaleGoldenrod;
             button_MuaBan.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button_MuaBan.Image = (Image)resources.GetObject("button_MuaBan.Image");
+            button_MuaBan.ImageAlign = ContentAlignment.MiddleLeft;
             button_MuaBan.Location = new Point(0, 532);
             button_MuaBan.Name = "button_MuaBan";
             button_MuaBan.Size = new Size(229, 57);

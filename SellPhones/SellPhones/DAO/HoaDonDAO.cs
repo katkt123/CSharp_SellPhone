@@ -74,7 +74,7 @@ namespace SellPhones.DAO
 
         public DataTable GetGiaSanPham(string tenSP)
         {
-            string query = $"SELECT DonGia, HinhAnh " +
+            string query = $"SELECT GiaBan, HinhAnh " +
                            $"FROM SanPham " +
                            $"WHERE TenSP = '{tenSP}'";
 

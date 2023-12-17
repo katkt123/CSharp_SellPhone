@@ -162,9 +162,8 @@
             label4.AutoSize = true;
             label4.Location = new Point(3, 9);
             label4.Name = "label4";
-            label4.Size = new Size(52, 20);
+            label4.Size = new Size(0, 20);
             label4.TabIndex = 4;
-            label4.Text = "MANV";
             // 
             // label8
             // 

@@ -724,7 +724,6 @@ C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\S
 C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\SellPhones.AssemblyInfoInputs.cache
 C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\SellPhones.AssemblyInfo.cs
 C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\SellPhones.csproj.CoreCompileInputs.cache
-C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\SellPhones.sourcelink.json
 C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\SellPhones.csproj.CopyComplete
 C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\SellPhones.dll
 C:\SGU\Nam3 HK1\C#\Backup_Final\SellPhones\SellPhones\obj\Debug\net6.0-windows\refint\SellPhones.dll

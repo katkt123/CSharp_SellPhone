@@ -1,4 +1,5 @@
-﻿using SellPhones.BUS;
+﻿using Sellphone.DAO;
+using SellPhones.BUS;
 using SellPhones.DAO;
 using System;
 using System.Collections.Generic;
@@ -15,12 +16,17 @@ namespace SellPhones.GUI.UserControls
     public partial class TaoHoaDon2 : Form
     {
         public HoaDonBUS hoaDonBUS;
+
         public TaoHoaDon2()
         {
             InitializeComponent();
             DateTime currentDate = DateTime.Now;
             string formattedDate = currentDate.ToString("dd/MM/yyyy");
-
+            string user = LoginGUI.user;
+            string pass = LoginGUI.password;
+            string id = TaiKhoanDAO.Instance.getIDTK(user, pass);
+            string idnv = LoginDAO.Instance.getMaNV(id);
+            textBox2.Text = idnv;
             label10.Text = formattedDate;
         }
 
@@ -86,7 +92,7 @@ namespace SellPhones.GUI.UserControls
         {
 
             // Tạo mới một đối tượng CTHDInfoUC và thêm vào flowLayoutPanel1
-            CTHDInfoUC cthdInfoUC = new CTHDInfoUC(masp,tenSP, soLuong.ToString(), giaSauGiam.ToString("C2"));
+            CTHDInfoUC cthdInfoUC = new CTHDInfoUC(masp, tenSP, soLuong.ToString(), giaSauGiam.ToString("C2"));
             flowLayoutPanel1.Controls.Add(cthdInfoUC);
         }
 
@@ -112,5 +118,7 @@ namespace SellPhones.GUI.UserControls
             label21.Text = giakhuyenmai;
             label20.Text = giagoc;
         }
+
+        
     }
 }

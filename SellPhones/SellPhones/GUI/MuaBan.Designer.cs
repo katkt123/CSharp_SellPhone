@@ -282,10 +282,10 @@
             panel2.Controls.Add(guna2Button7);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Right;
-            panel2.Location = new Point(1497, 169);
+            panel2.Location = new Point(1466, 169);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(445, 933);
+            panel2.Size = new Size(476, 933);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
             // 
@@ -298,7 +298,7 @@
             panel3.Location = new Point(0, 733);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(445, 200);
+            panel3.Size = new Size(476, 200);
             panel3.TabIndex = 3;
             // 
             // label_tongcong
@@ -307,7 +307,7 @@
             label_tongcong.Dock = DockStyle.Right;
             label_tongcong.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
             label_tongcong.ForeColor = Color.Red;
-            label_tongcong.Location = new Point(399, 0);
+            label_tongcong.Location = new Point(430, 0);
             label_tongcong.Name = "label_tongcong";
             label_tongcong.Size = new Size(46, 54);
             label_tongcong.TabIndex = 4;
@@ -356,14 +356,14 @@
             dataGridView_muaban.Size = new Size(422, 845);
             dataGridView_muaban.TabIndex = 2;
             dataGridView_muaban.CellContentClick += dataGridView_muaban_CellContentClick;
+            dataGridView_muaban.TabIndexChanged += dataGridView_muaban_TabIndexChanged;
             // 
             // TenSP
             // 
-            TenSP.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            TenSP.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             TenSP.HeaderText = "Tên sản phẩm";
             TenSP.MinimumWidth = 6;
             TenSP.Name = "TenSP";
-            TenSP.Width = 129;
             // 
             // SoLuong
             // 
@@ -383,16 +383,16 @@
             // 
             // GiaTruocGiam
             // 
-            GiaTruocGiam.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            GiaTruocGiam.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             GiaTruocGiam.HeaderText = "giá trước giảm";
             GiaTruocGiam.MinimumWidth = 6;
             GiaTruocGiam.Name = "GiaTruocGiam";
             GiaTruocGiam.Visible = false;
-            GiaTruocGiam.Width = 125;
+            GiaTruocGiam.Width = 136;
             // 
             // MucGiamGia
             // 
-            MucGiamGia.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            MucGiamGia.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             MucGiamGia.HeaderText = "Mức giảm giá";
             MucGiamGia.MinimumWidth = 6;
             MucGiamGia.Name = "MucGiamGia";
@@ -431,10 +431,10 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(229, 264);
+            flowLayoutPanel1.Location = new Point(229, 244);
             flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1262, 960);
+            flowLayoutPanel1.Size = new Size(1231, 980);
             flowLayoutPanel1.TabIndex = 7;
             // 
             // textbox_search

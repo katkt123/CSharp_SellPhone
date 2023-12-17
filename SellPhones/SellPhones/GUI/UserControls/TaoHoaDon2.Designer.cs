@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaoHoaDon2));
             label20 = new Label();
             label21 = new Label();
             label23 = new Label();
@@ -57,7 +58,7 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label20.ForeColor = SystemColors.ControlLightLight;
+            label20.ForeColor = SystemColors.ActiveCaptionText;
             label20.Location = new Point(803, 759);
             label20.Name = "label20";
             label20.Size = new Size(21, 24);
@@ -68,7 +69,7 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label21.ForeColor = SystemColors.ControlLightLight;
+            label21.ForeColor = SystemColors.ActiveCaptionText;
             label21.Location = new Point(803, 704);
             label21.Name = "label21";
             label21.Size = new Size(21, 24);
@@ -79,7 +80,7 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label23.ForeColor = SystemColors.ControlLightLight;
+            label23.ForeColor = SystemColors.ActiveCaptionText;
             label23.Location = new Point(496, 704);
             label23.Name = "label23";
             label23.Size = new Size(104, 24);
@@ -137,7 +138,7 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label22.ForeColor = SystemColors.ControlLightLight;
+            label22.ForeColor = SystemColors.ActiveCaptionText;
             label22.Location = new Point(496, 759);
             label22.Name = "label22";
             label22.Size = new Size(228, 24);
@@ -162,6 +163,7 @@
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Enabled = false;
             textBox2.Location = new Point(14, 77);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(614, 27);
@@ -233,7 +235,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.ForeColor = SystemColors.ActiveCaptionText;
             label1.Location = new Point(382, 25);
             label1.Name = "label1";
             label1.Size = new Size(178, 40);
@@ -242,6 +244,7 @@
             // 
             // buttonthanhtoan
             // 
+            buttonthanhtoan.Image = (Image)resources.GetObject("buttonthanhtoan.Image");
             buttonthanhtoan.Location = new Point(150, 724);
             buttonthanhtoan.Name = "buttonthanhtoan";
             buttonthanhtoan.Size = new Size(80, 44);

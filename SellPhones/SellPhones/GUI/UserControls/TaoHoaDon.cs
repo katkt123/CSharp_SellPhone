@@ -31,7 +31,7 @@ namespace SellPhones.GUI.UserControls
             InitializeComponent();
             hoaDonBUS = new HoaDonBUS();
             LoadSanPhamToComboBox();
-
+            getThongTin();
 
             comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
         }
@@ -40,9 +40,8 @@ namespace SellPhones.GUI.UserControls
         {
             string id = LoginGUI.user;
             string pass = LoginGUI.password;
-            MessageBox.Show(id + "   00000" + pass);
+            
             string matk = LoginBUS.Instance.getMaTK(id, pass);
-            MessageBox.Show(matk);
             string manv = LoginBUS.Instance.getMaNV(matk);
             manvLogined = manv;
             label4.Text = manvLogined;
@@ -89,7 +88,7 @@ namespace SellPhones.GUI.UserControls
 
                 if (giaVaHinhAnh != null && giaVaHinhAnh.Rows.Count > 0)
                 {
-                    gia = giaVaHinhAnh.Rows[0]["DonGia"].ToString();
+                    gia = giaVaHinhAnh.Rows[0]["GiaBan"].ToString();
                     hinhAnhPath = giaVaHinhAnh.Rows[0]["HinhAnh"].ToString();
                 }
 

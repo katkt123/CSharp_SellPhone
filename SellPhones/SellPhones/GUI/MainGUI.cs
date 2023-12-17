@@ -37,8 +37,8 @@ namespace SellPhones.GUI
             AddComponent("Thống kê", new ThongKe1UC(), "Statistics.png");
             AddComponent("Sản phẩm", new SanPhamUC(), "phone.png");
             AddComponent("Nhập Hàng", new PhieuNhapKhoUC(), "supplier.png");
-            AddComponent("Nhà Cung Cấp", new NhaCungCapUC(), "Logo.png");
-            AddComponent("Nhà Cung Cấp", new NhaCungCapUC(), "Logo.png");
+            AddComponent("Nhà Cung Cấp", new NhaCungCapUC(), "agreement.png");
+            AddComponent("Nhà Cung Cấp", new NhaCungCapUC(), "agreement.png");
 
             SolveEvent();
 

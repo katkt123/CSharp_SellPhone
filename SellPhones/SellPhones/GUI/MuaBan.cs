@@ -1,4 +1,5 @@
 ﻿using SellPhones.BUS;
+using SellPhones.DAO;
 using SellPhones.GUI.UserControls;
 using stdole;
 using System;
@@ -27,6 +28,7 @@ namespace SellPhones.GUI
         private CTHDInfoUC cthd;
 
         public DataGridView DataGridViewMuaban { get { return dataGridView_muaban; } }
+
 
 
         public MuaBan()
@@ -135,6 +137,27 @@ namespace SellPhones.GUI
                     }
                 }
             };
+
+            dataGridView_muaban.CellValidating += (sender, e) =>
+            {
+                int rowIndex = e.RowIndex;
+                int columnIndex = e.ColumnIndex;
+
+                // Chỉ xử lý khi là cột số lượng
+                if (columnIndex == 1 && rowIndex >= 0)
+                {
+                    DataGridViewCell cell = dataGridView_muaban.Rows[rowIndex].Cells[columnIndex];
+                    int newQuantity;
+
+                    // Kiểm tra giá trị mới của cột số lượng
+                    if (!int.TryParse(cell.Value?.ToString(), out newQuantity) || newQuantity < 1)
+                    {
+                        e.Cancel = true; // Hủy bỏ sự kiện để ngăn chặn người dùng di chuyển đến ô tiếp theo
+                        MessageBox.Show("Số lượng phải là một số nguyên dương lớn hơn 0.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            };
+
         }
 
         public void Tinh()
@@ -224,34 +247,51 @@ namespace SellPhones.GUI
         private void guna2Button8_Click(object sender, EventArgs e)
         {
             TaoHoaDon2 tao = new TaoHoaDon2();
-            string tonggiakhuyenmai = TinhTongGiaGoc().ToString(); // Lấy tổng giá và chuyển sang chuỗi
-
-            // Loại bỏ kí tự "$" từ chuỗi tổng giá
+            string tonggiakhuyenmai = TinhTongGiaGoc().ToString();
             tonggiakhuyenmai = tonggiakhuyenmai.Replace("$", "");
 
             string tonggiagoc = label_tongcong.Text;
-
             tonggiagoc = tonggiagoc.Replace("$", "");
 
-
             tao.setGia(tonggiagoc, tonggiakhuyenmai);
-            // Lấy dữ liệu từ dataGridView_muaban và truyền vào tao
+
+            List<string> insufficientStockProducts = new List<string>();
+
             foreach (DataGridViewRow row in dataGridView_muaban.Rows)
             {
                 string tenSP = row.Cells[0].Value.ToString();
                 string masp = GetMaSPTheoTenSP(tenSP);
-                int soLuong = int.Parse(row.Cells[1].Value.ToString());
+                int soLuongMua = int.Parse(row.Cells[1].Value.ToString());
                 double giaSauGiam = double.Parse(row.Cells[2].Value.ToString().Replace("$", ""));
-                
-           
 
-                // Truyền dữ liệu vào tao thông qua phương thức SetData (cần tạo phương thức này trong TaoHoaDon2)
-                tao.SetData(masp,tenSP, soLuong, giaSauGiam);
+                // Retrieve the quantity available in the store for the current product
+                int soLuongTrongCuaHang = SanPhamDAO.Instance.GetSoLuongTrongCuaHang(masp);
+
+                if (soLuongMua > soLuongTrongCuaHang)
+                {
+                    insufficientStockProducts.Add($"{tenSP} ({soLuongTrongCuaHang} sản phẩm trong cửa hàng)");
+                }
+                else
+                {
+                    // Truyền dữ liệu vào tao thông qua phương thức SetData (cần tạo phương thức này trong TaoHoaDon2)
+                    tao.SetData(masp, tenSP, soLuongMua, giaSauGiam);
+                }
             }
 
-            tao.StartPosition = FormStartPosition.CenterParent;
-            tao.ShowDialog();
+            // Check if there are insufficient stock products
+            if (insufficientStockProducts.Any())
+            {
+                string message = $"Không đủ hàng cho các sản phẩm sau:\n\n{string.Join("\n", insufficientStockProducts)}";
+                MessageBox.Show(message);
+            }
+            else
+            {
+                tao.StartPosition = FormStartPosition.CenterParent;
+                tao.ShowDialog();
+            }
+
         }
+
         private string GetMaSPTheoTenSP(string tenSP)
         {
             DataTable sanPhamInfo = HoaDonBUS.Instance.GetSanPhamInfoForComboBox();
@@ -420,6 +460,11 @@ namespace SellPhones.GUI
                 var wdg = (Mau1)sp;
                 wdg.Visible = wdg.label_ten.Text.ToLower().ToLower().Contains(textbox_search.Text.Trim().ToLower());
             }
+        }
+
+        private void dataGridView_muaban_TabIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 

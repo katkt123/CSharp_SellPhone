@@ -44,6 +44,7 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            button_MuaBan = new Button();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
@@ -67,9 +68,9 @@
             PanelTools.BackColor = Color.PaleGoldenrod;
             PanelTools.Location = new Point(2, 151);
             PanelTools.MaximumSize = new Size(229, 439);
-            PanelTools.MinimumSize = new Size(229, 439);
+            PanelTools.MinimumSize = new Size(229, 319);
             PanelTools.Name = "PanelTools";
-            PanelTools.Size = new Size(229, 439);
+            PanelTools.Size = new Size(229, 376);
             PanelTools.TabIndex = 11;
             // 
             // panel_UC
@@ -183,11 +184,26 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
+            // button_MuaBan
+            // 
+            button_MuaBan.BackColor = Color.PaleGoldenrod;
+            button_MuaBan.Font = new Font("Times New Roman", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            button_MuaBan.Image = (Image)resources.GetObject("button_MuaBan.Image");
+            button_MuaBan.ImageAlign = ContentAlignment.MiddleLeft;
+            button_MuaBan.Location = new Point(1, 533);
+            button_MuaBan.Name = "button_MuaBan";
+            button_MuaBan.Size = new Size(229, 57);
+            button_MuaBan.TabIndex = 10;
+            button_MuaBan.Text = "Mua Bán";
+            button_MuaBan.UseVisualStyleBackColor = false;
+            button_MuaBan.Click += button_MuaBan_Click;
+            // 
             // SubGUI
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 595);
+            Controls.Add(button_MuaBan);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(PanelTools);
             Controls.Add(panel_UC);
@@ -224,5 +240,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Button button_MuaBan;
     }
 }
